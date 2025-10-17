@@ -18,6 +18,7 @@ function Art() {
                 pin: true
             }
         });
+
         artTimeline
             .to(".will-fade", {
                opacity: 0,
