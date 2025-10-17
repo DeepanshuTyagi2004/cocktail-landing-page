@@ -13,8 +13,8 @@ function Menu() {
         return sliderLists[((indexOffset + currentIndex + totalCocktailsLength) % totalCocktailsLength)];
     }
     const currentCocktail = getCocktailAt(0);
-    const prevCoctail = getCocktailAt(-1);
-    const nextCoctail = getCocktailAt(1);
+    const prevCocktail = getCocktailAt(-1);
+    const nextCocktail = getCocktailAt(1);
     const goToSlide = (index) => {
         const newIndex = (index + totalCocktailsLength) % totalCocktailsLength;
         setCurrentIndex(newIndex);
@@ -73,12 +73,12 @@ function Menu() {
             <div className="content">
                 <div className="arrows">
                     <button className="text-left" onClick={() => goToSlide(currentIndex - 1)}>
-                        <span>{prevCoctail.name}</span>
+                        <span>{prevCocktail.name}</span>
                         <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true"/>
                     </button>
 
                     <button className="flex flex-col items-end justify-center gap-2 text-right" onClick={() => goToSlide(currentIndex + 1)}>
-                        <span>{nextCoctail.name}</span>
+                        <span>{nextCocktail.name}</span>
                         <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true"/>
                     </button>
                 </div>
